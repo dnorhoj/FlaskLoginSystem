@@ -1,0 +1,6 @@
+{
+    "__comment": "Rename this file to data.json and place in root",
+    "salt": "insert salt",
+    "nextuser": "0",
+    "users": {}
+}
