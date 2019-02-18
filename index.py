@@ -4,7 +4,7 @@ import auth, json
 # Set up app
 app = Flask(__name__)
 app.secret_key = json.load(open("data.json"))["secret"]
-PORT = 8000
+PORT = 5000
 
 @app.route('/')
 def index():
@@ -17,8 +17,8 @@ def loginsite():
 		
 		if auth.login(form('uname'), form('pass')):
 			session['username'] = form('uname')
-			return "True :)"
-		return "False :("
+			return redirect("/me")
+		return "Wrong credentials :("
 
 	return render_template("login.html")
 
@@ -30,14 +30,16 @@ def registersite():
 		code = auth.register(form('uname'), form('pass'), form('email'))
 		if code == 0:
 			return "User created!<br><a href='/login'>Click here to go back</a>"
+		elif code == 1:
+			return render_template("register.html", criteria=True)
 		elif code == 2:
 			return "Username already in database."
 		elif code == 3:
 			return "Email already in database."
 		else:
-			return "Unknown error."
+			return "Unknown Error"
 
-	return render_template("register.html")
+	return render_template("register.html", criteria=False)
 
 @app.route('/me')
 def me():

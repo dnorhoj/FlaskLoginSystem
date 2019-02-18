@@ -1,4 +1,4 @@
-import json, hashlib
+import json, hashlib, re
 
 # Filenames
 DATAFILE = "data.json"
@@ -20,16 +20,20 @@ def login(username, password):
 		saltedpass = password+data["salt"]
 		encryptedpass = hashlib.sha256(saltedpass.encode()).hexdigest()
 
-		print(saltedpass)
-		print(encryptedpass)
-
 		if user["password"] == encryptedpass:
 			return True
 		
 		return False
 	
 def register(username, password, email=None):
-	with open(DATAFILE) as f:  
+	"""
+	Rules for password
+	1. 7 tegn
+	2. Mindst et stort bogstav
+	3. Mindst et småt bogstav
+	4. Mindst et tal
+	"""
+	with open(DATAFILE) as f:
 		data = json.load(f)
 		
 		for user in data["users"].values():
@@ -37,7 +41,10 @@ def register(username, password, email=None):
 				return 2 # 2 = Username already exist
 			elif user["email"] == email:
 				return 3 # 3 = Email already exist
-			
+
+		if not checkpass(password):
+			return 1 # 1 = Password does not meet criterias
+
 		id = data["nextuser"]
 
 		data["users"][id] = {}
@@ -52,4 +59,8 @@ def register(username, password, email=None):
 
 		with open(DATAFILE, 'w') as outfile:  
 			json.dump(data, outfile, indent=4)
-			return 0
+			return 0 # 0 = Success
+
+def checkpass(password):
+	if re.match(r'.{7}', password) is None:
+		return False

@@ -1,0 +1,17 @@
+{
+	"secret": "NaziFloedeboller",
+	"salt": "jensensboefhusdkergodt",
+	"nextuser": "3",
+	"users": {
+		"1": {
+			"email": "daniel@norhoj.com",
+			"username": "dnorhoj",
+			"password": "d0caf2986273400748e68c3227ed9248e58fb148aaf5279500aa23afd4feb47a"
+		},
+		"2": {
+			"email": "OOF@OOFSTER.FOO",
+			"username": "OOFTHEMAN",
+			"password": "902ce06a93a23b04e449c8af6b464fcca48238cf65ecb4012ed262863596abaf"
+		}
+	}
+}
