@@ -1,17 +1,21 @@
 {
-	"secret": "NaziFloedeboller",
-	"salt": "jensensboefhusdkergodt",
-	"nextuser": "3",
-	"users": {
-		"1": {
-			"email": "daniel@norhoj.com",
-			"username": "dnorhoj",
-			"password": "d0caf2986273400748e68c3227ed9248e58fb148aaf5279500aa23afd4feb47a"
-		},
-		"2": {
-			"email": "OOF@OOFSTER.FOO",
-			"username": "OOFTHEMAN",
-			"password": "902ce06a93a23b04e449c8af6b464fcca48238cf65ecb4012ed262863596abaf"
-		}
-	}
+    "secret": "NaziFloedeboller",
+    "salt": "jensensboefhusdkergodt",
+    "users": [
+        [
+            "daniel@norhoj.com",
+            "dnorhoj",
+            "d0caf2986273400748e68c3227ed9248e58fb148aaf5279500aa23afd4feb47a"
+        ],
+        [
+            "a",
+            "dnorhoj1",
+            "d0caf2986273400748e68c3227ed9248e58fb148aaf5279500aa23afd4feb47a"
+        ],
+        [
+            null,
+            "asdf",
+            "e6ec45779366f1b04414bc974f3091943f5a9bc23e2bf5abc5812f08c003e7ba"
+        ]
+    ]
 }

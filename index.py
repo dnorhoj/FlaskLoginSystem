@@ -4,7 +4,7 @@ import auth, json
 # Set up app
 app = Flask(__name__)
 app.secret_key = json.load(open("data.json"))["secret"]
-PORT = 5000
+PORT = 8000
 
 @app.route('/')
 def index():
@@ -28,18 +28,21 @@ def registersite():
 		form = request.form.get
 		
 		code = auth.register(form('uname'), form('pass'), form('email'))
-		if code == 0:
+		login = (form('email'), form('uname'), form('pass'))
+		if code == 0: # Success
 			return "User created!<br><a href='/login'>Click here to go back</a>"
-		elif code == 1:
-			return render_template("register.html", criteria=True)
-		elif code == 2:
-			return "Username already in database."
-		elif code == 3:
-			return "Email already in database."
+		elif code == 1: # Password does not pass criterias
+			return render_template("register.html", criteria=True, login=login)
+		elif code == 2: # Username exists
+			return render_template("register.html", error="Username already exists.", login=login)
+		elif code == 3: # Email exists
+			return render_template("register.html", error="Email already exists.", login=login)
+		elif code == 4: # No username entered
+			return render_template("register.html", error="No username entered.", login=login)
 		else:
 			return "Unknown Error"
 
-	return render_template("register.html", criteria=False)
+	return render_template("register.html")
 
 @app.route('/me')
 def me():
@@ -47,7 +50,8 @@ def me():
 
 if __name__ == '__main__':
 	app.run(
-		debug=True, host='0.0.0.0',
+		debug=True,
+		host='0.0.0.0',
 		port=PORT,
 		#ssl_context='adhoc'
 	)

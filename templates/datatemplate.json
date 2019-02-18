@@ -2,6 +2,5 @@
     "__comment": "Rename this file to data.json and place in root",
     "secret": "random text string",
     "salt": "insert salt",
-    "nextuser": "0",
-    "users": {}
+    "users": []
 }

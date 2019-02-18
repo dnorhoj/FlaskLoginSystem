@@ -1,0 +1,66 @@
+21:53:21,618 werkzeug WARNING  * Debugger is active!
+21:53:21,621 werkzeug INFO  * Debugger PIN: 174-027-118
+21:53:21,628 werkzeug INFO  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+21:54:19,770 werkzeug INFO  * Restarting with stat
+21:54:19,984 werkzeug WARNING  * Debugger is active!
+21:54:19,987 werkzeug INFO  * Debugger PIN: 174-027-118
+21:54:19,993 werkzeug INFO  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+21:54:23,907 werkzeug INFO 127.0.0.1 - - [18/Feb/2019 21:54:23] "GET /me HTTP/1.1" 200 -
+21:54:26,165 werkzeug INFO 127.0.0.1 - - [18/Feb/2019 21:54:26] "GET /register HTTP/1.1" 200 -
+21:54:33,653 root DEBUG test
+21:54:33,653 werkzeug INFO 127.0.0.1 - - [18/Feb/2019 21:54:33] "POST /register HTTP/1.1" 200 -
+21:54:52,314 root DEBUG test
+21:54:52,314 werkzeug INFO 127.0.0.1 - - [18/Feb/2019 21:54:52] "POST /register HTTP/1.1" 200 -
+21:55:14,84 werkzeug INFO  * Detected change in 'c:\\Users\\dnorh\\OneDrive\\Projects\\Python\\Web\\LoginSystem\\index.py', reloading
+21:55:14,105 werkzeug INFO  * Restarting with stat
+21:55:14,342 werkzeug INFO  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+21:55:17,875 root DEBUG test
+21:55:17,880 werkzeug INFO 127.0.0.1 - - [18/Feb/2019 21:55:17] "POST /register HTTP/1.1" 200 -
+21:55:22,738 root DEBUG test
+21:55:22,738 werkzeug INFO 127.0.0.1 - - [18/Feb/2019 21:55:22] "POST /register HTTP/1.1" 200 -
+21:55:29,14 werkzeug INFO  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+21:55:38,859 root DEBUG test
+21:55:38,859 werkzeug INFO 127.0.0.1 - - [18/Feb/2019 21:55:38] "POST /register HTTP/1.1" 200 -
+21:56:42,920 root DEBUG test
+21:56:42,920 werkzeug INFO 127.0.0.1 - - [18/Feb/2019 21:56:42] "POST /register HTTP/1.1" 200 -
+21:56:50,374 root DEBUG test
+21:56:50,375 werkzeug INFO 127.0.0.1 - - [18/Feb/2019 21:56:50] "POST /register HTTP/1.1" 200 -
+21:56:51,882 root DEBUG test
+21:56:51,883 werkzeug INFO 127.0.0.1 - - [18/Feb/2019 21:56:51] "POST /register HTTP/1.1" 200 -
+21:56:56,974 werkzeug INFO  * Restarting with stat
+21:56:57,192 werkzeug WARNING  * Debugger is active!
+21:56:57,195 werkzeug INFO  * Debugger PIN: 174-027-118
+21:56:57,201 werkzeug INFO  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+21:57:01,629 root DEBUG test
+21:57:01,629 werkzeug INFO 127.0.0.1 - - [18/Feb/2019 21:57:01] "POST /register HTTP/1.1" 200 -
+21:57:27,883 werkzeug INFO  * Detected change in 'c:\\Users\\dnorh\\OneDrive\\Projects\\Python\\Web\\LoginSystem\\auth.py', reloading
+21:57:27,901 werkzeug INFO  * Restarting with stat
+21:57:35,335 werkzeug INFO  * Restarting with stat
+21:57:37,88 root DEBUG test
+21:57:37,88 werkzeug INFO 127.0.0.1 - - [18/Feb/2019 21:57:37] "POST /register HTTP/1.1" 200 -
+21:57:39,939 root DEBUG test
+21:57:39,939 werkzeug INFO 127.0.0.1 - - [18/Feb/2019 21:57:39] "POST /register HTTP/1.1" 200 -
+21:57:40,963 root DEBUG test
+21:57:40,964 werkzeug INFO 127.0.0.1 - - [18/Feb/2019 21:57:40] "POST /register HTTP/1.1" 200 -
+21:58:19,279 root DEBUG test
+21:58:19,279 werkzeug INFO 127.0.0.1 - - [18/Feb/2019 21:58:19] "POST /register HTTP/1.1" 200 -
+21:58:28,739 werkzeug INFO  * Restarting with stat
+21:58:44,368 werkzeug INFO  * Restarting with stat
+22:00:03,396 werkzeug INFO  * Restarting with stat
+22:00:11,851 werkzeug INFO  * Restarting with stat
+22:00:19,260 werkzeug INFO  * Restarting with stat
+22:01:56,511 werkzeug INFO  * Restarting with stat
+22:01:57,780 werkzeug INFO  * Restarting with stat
+22:06:40,50 werkzeug INFO  * Restarting with stat
+22:07:13,87 werkzeug INFO  * Restarting with stat
+22:07:42,928 werkzeug INFO  * Restarting with stat
+22:08:21,995 werkzeug INFO  * Restarting with stat
+22:08:33,534 werkzeug INFO  * Restarting with stat
+22:08:38,881 werkzeug INFO  * Restarting with stat
+22:08:58,528 werkzeug INFO  * Restarting with stat
+22:08:59,800 werkzeug INFO  * Restarting with stat
+22:09:10,280 werkzeug INFO  * Restarting with stat
+22:09:12,567 werkzeug INFO  * Restarting with stat
+22:09:16,888 werkzeug INFO  * Restarting with stat
+22:09:21,211 werkzeug INFO  * Restarting with stat
+22:09:29,640 werkzeug INFO  * Restarting with stat
