@@ -37,9 +37,7 @@ def register(username, password, email=None):
 		return 4 # 4 = Username is too short
 	elif re.match(r"[^@]+@[^@]+\.[^@]+", email) is None:
 		return 5 # 5 = Email is invalid
-	elif len(email) == 0:
-		email = None
-
+		
 	with open(DATAFILE) as f:
 		data = json.load(f)
 		for user in data["users"]:
