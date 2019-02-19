@@ -31,23 +31,22 @@ def login(username, password):
 
 # Register function
 def register(username, password, email=None):
-	if len(username) == 0:
-		return 4
+	if not checkpass(password):
+		return 1 # 1 = Password does not meet criterias
+	elif len(username) < 5:
+		return 4 # 4 = Username is too short
+	elif re.match(r"[^@]+@[^@]+\.[^@]+", email) is None:
+		return 5 # 5 = Email is invalid
 	elif len(email) == 0:
 		email = None
+
 	with open(DATAFILE) as f:
 		data = json.load(f)
 		for user in data["users"]:
 			if user[1] == username:
-				print("Username already exist")
 				return 2 # 2 = Username already exist
 			elif user[0] == email:
-				print("Email already exist")
 				return 3 # 3 = Email already exist
-
-		if not checkpass(password):
-			print("Pass does not meet criterias")
-			return 1 # 1 = Password does not meet criterias
 
 		user = []
 		user.append(email)

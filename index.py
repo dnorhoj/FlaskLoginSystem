@@ -29,16 +29,18 @@ def registersite():
 		
 		code = auth.register(form('uname'), form('pass'), form('email'))
 		login = (form('email'), form('uname'), form('pass'))
-		if code == 0: # Success
+		if code == 0:
 			return "User created!<br><a href='/login'>Click here to go back</a>"
-		elif code == 1: # Password does not pass criterias
+		elif code == 1:
 			return render_template("register.html", criteria=True, login=login)
-		elif code == 2: # Username exists
+		elif code == 2:
 			return render_template("register.html", error="Username already exists.", login=login)
-		elif code == 3: # Email exists
+		elif code == 3:
 			return render_template("register.html", error="Email already exists.", login=login)
-		elif code == 4: # No username entered
-			return render_template("register.html", error="No username entered.", login=login)
+		elif code == 4:
+			return render_template("register.html", error="Username is too short! It has to be at least 5 characters long", login=login)
+		elif code == 5:
+			return render_template("register.html", error="Invalid email address!", login=login)
 		else:
 			return "Unknown Error"
 
