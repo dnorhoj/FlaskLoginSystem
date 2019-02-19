@@ -7,6 +7,9 @@ DATAFILE = "data.json"
 def checkpass(password):
 	if re.match(r'.{7}', password) is None:
 		return False
+	elif re.search(r'[A-Z][a-z]|[a-z][A-Z]', password) is None:
+		return False
+
 	return True
 
 # Login function
